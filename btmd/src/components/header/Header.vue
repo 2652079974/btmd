@@ -24,7 +24,6 @@ export default {
       Logo,Nav,SearchBox,User
   }
 
-
 }
 </script>
 

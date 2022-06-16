@@ -159,7 +159,7 @@ export default {
         inset 2px 2px 5px rgba(0, 0, 0, 0.4);
     }
     &:hover {
-      background-color: rgba(255, 223, 164, 0.5);
+      background-color: rgba(255, 197, 89, 0.8);
       // color: white;
     }
   }

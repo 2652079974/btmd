@@ -1,8 +1,14 @@
 <template>
   <form :action="action" :method="method">
     <div class="search-box iconfont">
-      <input type="text" :placeholder="placeholder" v-model="keywords" :name='name' class="search-input iconfont" />
-        <button type="submit" class="iconfont" value="" >&#xe86f;</button>
+      <input type="text" 
+        :placeholder="placeholder" 
+        v-model="keywords" 
+        :name='name' 
+        @focus="placeholder=''"
+        @blur="placeholder='请输入关键字'"
+        class="search-input iconfont" />
+      <button type="submit" class="iconfont" value="" >&#xe86f;</button>
     </div>
   </form>
 </template>

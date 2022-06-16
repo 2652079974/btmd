@@ -12,6 +12,7 @@ export default {
 <style lang="less" scoped>
 .goods-comment-content {
     width: 100%;
-    height: 20rem;
+    height: 100%;
+    background-color: cyan;
 }
 </style>

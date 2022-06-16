@@ -86,6 +86,7 @@ export default {
     margin: 0 auto;
     padding: .5rem 0;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
+    border-radius: .3rem;
     background-color: rgba(255, 255, 255, .3);
     overflow: hidden;
     transition: .3s all;
@@ -103,7 +104,6 @@ export default {
         background:linear-gradient(to right,rgba(0, 250, 250, 0.3),rgba(252, 0, 218, 0.2) );
         border-radius: 50%;
         transition: .6s all;
-
     }
     &:hover{
         &::before{
@@ -148,7 +148,8 @@ export default {
 
         input[type="checkbox"] {
             position: absolute;
-            top: -.5rem;
+            top: 0rem;
+            left: .5rem;
             width: 1rem;
             height: 1rem;
             margin-right: .5rem;
@@ -160,7 +161,7 @@ export default {
             height: 90%;
             width: 4.5rem;
             margin: 0.25rem;
-            margin-left: .5rem;
+            margin-left: .8rem;
             border-radius: .2rem;
             box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
             overflow: hidden;

@@ -5,6 +5,9 @@ import Login from "../components/page/Login/Login.vue"
 import User from "../components/page/PersonalCenter.vue"
 import GoodsInfo from "../components/page/GoodsInfo/GoodsInfo.vue"
 import goodsComment from "../components/page/GoodsInfo/goodsComment.vue"
+import show from "../components/page/GoodsInfo/show.vue"
+import params from "../components/page/GoodsInfo/params.vue"
+import guarantee from "../components/page/GoodsInfo/guarantee.vue"
 
 Vue.use(VueRouter)
 
@@ -18,10 +21,17 @@ const router = new VueRouter({
             path: '/goodsinfo/:id',
             component: GoodsInfo,
             children: [
-                { path: 'comment', component: goodsComment }
+                { path: 'comment', component: goodsComment },
+                { path: '', redirect: 'show' },
+                { path: 'show', component: show },
+                { path: 'params', component: params },
+                { path: 'guarantee', component: guarantee }
+
             ]
         }
-    ]
+    ],
+    linkActiveClass: 'link-active',
+    linkExactActiveClass: 'link-exact-active',
 
 })
 

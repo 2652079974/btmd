@@ -119,7 +119,7 @@ export default {
           Authorization: token
         }
       })
-      that.img = "http://124.93.196.45:10001" + user.avatar
+      // that.img = "http://124.93.196.45:10001" + user.avatar
       that.nickName = user.nickName
     }
     temp(this.token, this)
@@ -150,8 +150,6 @@ export default {
 
       >div {
         height: 100%;
-
-        //   background-color: red;
         >img {
           width: 100%;
           height: 100%;

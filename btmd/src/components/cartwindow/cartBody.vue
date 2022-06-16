@@ -5,14 +5,14 @@
         </div>
         <div class="cart-body" ref="cartBody" @contextmenu.prevent="" >
             <!-- 购物车标题区域 -->
-            <h1 class="cart-title"> 
+            <h1 class="cart-title" @dblclick="hideCart"> 
                 <!-- 全选功能 -->
                 <span class="check-all" @click="checkAll()" :title="checkHint">{{checkHint}}</span>
                 <!-- 购物车标题，关闭购物车功能 -->
                 <h1 class="iconfont" @click="hideCart" title="点击关闭购物车"> &#xe899;购物车</h1>
             </h1>
             <!-- 渲染表项区域 -->
-            <div class="cart-list">
+            <div class="cart-list"  @dblclick.self="hideCart">
                 <CartItem 
                     class="cart-list-item"
                     v-for="item in cartList" 
@@ -23,7 +23,7 @@
             </div>
 
             <!-- 结算区域——开始 -->
-            <div class="settlement-amount">
+            <div class="settlement-amount"  @dblclick="hideCart">
                 <div class="settlement-amount-left">
                     <span>已选商品</span>
                     <span>共<span class="amount"> {{ amount }} </span>件商品</span>
@@ -171,7 +171,7 @@ export default {
             cursor: pointer;
             position: absolute;
             display: inline-block;
-            width: 3rem;
+            width: 4rem;
             text-align: center;
             top: 50%;
             left: .5rem;

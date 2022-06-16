@@ -48,7 +48,7 @@ import Modify from './Login/modifyInfo.vue'
 export default {
     data(){
         return{
-            avatar:'',
+            avatar:require('../../assets/image/goldrush.jpg'),
             username:'',
             email:'',
             phone:'',
@@ -67,7 +67,7 @@ export default {
                     Authorization:token
                 }
             })
-            that.avatar = 'http://124.93.196.45:10001'+user.avatar
+            // that.avatar = 'http://124.93.196.45:10001'+user.avatar
             that.username = user.userName
             that.email = user.email
             that.phone = user.phonenumber

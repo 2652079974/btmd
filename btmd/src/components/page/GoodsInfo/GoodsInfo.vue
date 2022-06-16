@@ -38,10 +38,10 @@
       </div>
       <div class="poster">
         <div class="tabhost">
-          <router-link class="tab" to="">商品展示</router-link>
-          <router-link class="tab" to="">商品参数</router-link>
-          <router-link class="tab" to="">质量保证</router-link>
-          <router-link class="tab" :to="'/goodsInfo/' + this.id + '/comment'">商品评价</router-link>
+          <router-link class="tab" :to="'/goodsInfo/' + this.id + '/show'" @click="changeTab('show')"> 商品展示</router-link>
+          <router-link class="tab" :to="'/goodsInfo/' + this.id + '/params'" @click="changeTab('params')">商品参数</router-link>
+          <router-link class="tab" :to="'/goodsInfo/' + this.id + '/guarantee'" @click="changeTab('guarantee')">质量保证</router-link>
+          <router-link class="tab" :to="'/goodsInfo/' + this.id + '/comment'" @click="changeTab('comment')">商品评价</router-link>
         </div>
         <div class="tabPage">
           <router-view></router-view>
@@ -84,16 +84,49 @@ export default {
     this.isNew = goodsItem.isNew
     this.isHot = goodsItem.isHot
 
+    setTimeout(() => {
+      // // 判断当前路由处于哪个子页面
+      // let currentRoute = this.$route.path.split('/')[3]
+      // // console.log(this.$refs[currentRoute]);
+      // // 动态增加类名
+      // this.$refs.show.classList.add('active')
+      // this.$refs.params.style.backgroundColor = '#ffa500'
+      // this.$refs.guarantee.style.backgroundColor = '#ffa500'
+      // this.$refs.comment.style.backgroundColor = '#ffa500'
+      // this.$refs[currentRoute].style.backgroundColor = 'white'
+
+    }, 0);
+    
+
+
+  },
+  mounted(){
+    
   },
   updated() {
     if (this.number < 1) {
       this.number = 1;
     }
+
+    setTimeout(() => {
+      // // 判断当前路由处于哪个子页面
+      // let currentRoute = this.$route.path.split('/')[3]
+      // // 初始化为橙色
+      // this.$refs.show.style.backgroundColor = '#ffa500'
+      // this.$refs.params.style.backgroundColor = '#ffa500'
+      // this.$refs.guarantee.style.backgroundColor = '#ffa500'
+      // this.$refs.comment.style.backgroundColor = '#ffa500'
+      // this.$refs[currentRoute].style.backgroundColor = 'white'
+
+    }, 0);
   },
   methods: {
     addNewGoods() {
       EventBus.$emit('addNewItem', this.id, this.number)
+    },
+    changeTab(tab){
     }
+
   },
 
 }
@@ -246,7 +279,9 @@ export default {
           display: inline-block;
           margin-right: .4rem;
           padding: 0 .5rem;
-          background-color: white;
+          user-select: none;
+          background-color: rgba(255, 255, 255, .5);
+          font-size: .8rem;
         }
 
       }
@@ -263,5 +298,12 @@ export default {
 .goods-info-title {
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+}
+
+.link-active{
+  background-color: rgba(255, 255,0, .5) !important;
+}
+.link-exact-active{
+  background-color:rgba(255, 255,0, .5) !important;
 }
 </style>
