@@ -280,15 +280,15 @@ export default {
           margin-right: .4rem;
           padding: 0 .5rem;
           user-select: none;
-          background-color: rgba(255, 255, 255, .5);
+          background-color: rgb(255, 136, 0);
           font-size: .8rem;
         }
 
       }
 
       .tabPage {
-        width: 100%;
-        height: 30rem;
+        width: 60%;
+        min-height: 30rem;
         background-color: white;
       }
     }
@@ -301,9 +301,9 @@ export default {
 }
 
 .link-active{
-  background-color: rgba(255, 255,0, .5) !important;
+  background-color: rgba(255, 255,255,1) !important;
 }
 .link-exact-active{
-  background-color:rgba(255, 255,0, .5) !important;
+  background-color:rgba(255, 255,255, 1) !important;
 }
 </style>

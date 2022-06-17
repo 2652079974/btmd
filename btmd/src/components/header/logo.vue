@@ -43,7 +43,6 @@ export default {
             top: 50%;
             z-index: 1;
             transform: translate3D(0, -50%, 1rem);
-
             height: 2rem;
         }
 

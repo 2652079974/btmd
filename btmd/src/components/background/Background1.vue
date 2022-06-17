@@ -32,20 +32,19 @@ export default {
     transform: translateY(0);
   }
 }
-
 // 背景
 .background {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 120%;
   background: linear-gradient(
     to bottom right,
     rgb(0, 232, 248) 20%,
     rgb(161, 11, 238) 100%
   );
-  opacity: 0.8;
+  opacity: 1;
   overflow: hidden;
   >div{
     animation: float 1.5s ease-in-out;

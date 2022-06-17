@@ -1,6 +1,6 @@
 <template>
   <div class="params-content">
-
+    <h1>这是商品参数页</h1>
   </div>
 </template>
 
@@ -14,6 +14,5 @@ export default {
     .params-content{
         height: 100%;
         width: 100%;
-        background-color: green;
     }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="guarantee-content">
-
+    <h1>这是质量保障页</h1>
   </div>
 </template>
 
@@ -13,6 +13,5 @@ export default {
     .guarantee-content{
         height: 100%;
         width: 100%;
-        background-color: blue;
     }
 </style>

@@ -4,9 +4,9 @@
         <!-- 商品图片展示区域 -->
         <div class="item-img">
             <input type="checkbox" v-model="goodsItem.isChecked" name="" id="">
-            <a href="javascript:;">
+            <router-link :to="'/goodsinfo/'+this.item.id">
                 <img :src="src" alt="">
-            </a>
+            </router-link>
         </div>
         <!-- # 列表表项操作区域——开始 -->
         <div class="operation-zone">

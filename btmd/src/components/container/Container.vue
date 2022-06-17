@@ -61,7 +61,7 @@ export default {
 }
 
 .banner {
-    height: 20rem;
+    height: 24rem;
 }
 
 .mainContent {
